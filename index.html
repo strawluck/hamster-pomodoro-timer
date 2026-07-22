@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pomodoro Timer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <img id="bg-gif" class="bg-gif" src="assets/background.gif" alt="" aria-hidden="true" />
+
+  <main class="app">
+    <h1 class="title">✨ pomodoro timer ✨</h1>
+
+    <div class="timer-card">
+      <div class="time-display" id="time-display">25:00</div>
+
+      <div class="set-row" id="set-row">
+        <label>
+          min
+          <input type="number" id="min-input" min="0" max="180" value="25" />
+        </label>
+        <label>
+          sec
+          <input type="number" id="sec-input" min="0" max="59" value="0" />
+        </label>
+        <button id="set-btn" class="btn btn-small">set</button>
+      </div>
+
+      <div class="presets">
+        <button class="btn btn-tiny preset" data-min="5">5m</button>
+        <button class="btn btn-tiny preset" data-min="15">15m</button>
+        <button class="btn btn-tiny preset" data-min="25">25m</button>
+        <button class="btn btn-tiny preset" data-min="45">45m</button>
+      </div>
+
+      <div class="controls">
+        <button id="start-btn" class="btn">start</button>
+        <button id="pause-btn" class="btn" disabled>pause</button>
+        <button id="reset-btn" class="btn">reset</button>
+      </div>
+    </div>
+
+    <button id="mute-btn" class="mute-btn" title="toggle music">🔊</button>
+  </main>
+
+  <div id="finish-overlay" class="finish-overlay hidden">
+    <div class="finish-content">
+      <canvas id="key-canvas" width="640" height="480"></canvas>
+      <div class="caption" id="caption">TIME'S UP!</div>
+      <button id="dismiss-btn" class="btn">okay!</button>
+    </div>
+  </div>
+
+  <video id="source-video" src="assets/hamster.mov" playsinline loop style="display:none"></video>
+
+  <script src="script.js"></script>
+</body>
+</html>
