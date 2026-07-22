@@ -46,6 +46,6 @@ Press Ctrl+C in that terminal to stop the server when you're done. Any static fi
 
 ## Customizing
 
-- Colors and the panel style live in the `:root` variables at the top of `style.css`.
-- If the chroma key leaves a green fringe, or cuts too much off the hamster, adjust `GREEN_CUTOFF` and `FEATHER` near the top of `script.js`.
-- The melody is the `MELODY` and `BASS` arrays in `script.js`, written as frequencies in Hz, with `null` standing in for a rest.
+- Colors and the panel style live in the `:root` variables at the top of `style.css`
+- If the chroma key leaves a green fringe, or cuts too much off the hamster, adjust `GREEN_CUTOFF` and `FEATHER` near the top of `script.js`
+- The melody is the `MELODY` and `BASS` arrays in `script.js`, written as frequencies in Hz, with `null` standing in for a rest
